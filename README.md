@@ -33,7 +33,7 @@ The slider bar was implemented as the secondary screen instead of the segmented 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/jasmineiris/codepath/tipCal2.0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./tipCal2.0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
