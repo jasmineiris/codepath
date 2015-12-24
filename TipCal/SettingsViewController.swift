@@ -14,9 +14,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var percentLabel: UILabel!
     
     @IBAction func percentAction(sender: AnyObject) {
-        let currentValue = Double(percentSlider.value)
-        percentLabel.text = String(format: "%.0f%%", currentValue)
-        let normPerc = currentValue / 100
+        let currentValue = Int(percentSlider.value)
+        let normPerc = Double(currentValue) / 100
+        
+        percentLabel.text = String(format: "Custom Tip: %d%%", currentValue)
+        
         
     //To save a key to NSUserDefaults, do something like this:
         //var defaultPercent:String = String(format: "
@@ -26,6 +28,16 @@ class SettingsViewController: UIViewController {
     
     //synchronize to guarantee that your updates are saved.
 
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaultTip = Int(defaults.doubleForKey("tip percentage") * 100)
+        self.percentLabel.text = String(format: "Custom Tip: %d%%", defaultTip)
+        self.percentSlider.value = Float(defaultTip)
     }
 }
     

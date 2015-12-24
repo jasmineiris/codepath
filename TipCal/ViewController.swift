@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             tipPercentage = tipPercentages[tipController.selectedSegmentIndex]
         }
         var splitValue = NSString(string: splitField.text!).doubleValue
-        if ( splitValue == 0 || splitValue < 0) {
+        if (splitValue == 0 || splitValue < 0) {
             splitValue = 1
         }
         
