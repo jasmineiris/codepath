@@ -8,6 +8,10 @@
 
 import UIKit
 
+var viewBillAmount = Double(0)
+var viewSplitNum = Int(0)
+var tipSelection = Int(0)
+
 class ViewController: UIViewController {
 
     
@@ -22,9 +26,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipController: UISegmentedControl!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (viewBillAmount != 0)
+        {
+            self.billamountField.text = String(format: "%.2f", viewBillAmount)
+        }
         
+        if(viewSplitNum == 0)
+        {
+            self.splitField.text = String(format: "")
+        } else
+        {
+            self.splitField.text = String(format: "%d", viewSplitNum)
+        }
+        self.tipController.selectedSegmentIndex = tipSelection
+        onEditingChanged(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,10 +68,16 @@ class ViewController: UIViewController {
         } else {
             tipPercentage = tipPercentages[tipController.selectedSegmentIndex]
         }
+        
         var splitValue = NSString(string: splitField.text!).doubleValue
         if (splitValue == 0 || splitValue < 0) {
             splitValue = 1
         }
+        
+        viewBillAmount = billAmount
+        viewSplitNum = Int(splitValue)
+        tipSelection = tipController.selectedSegmentIndex
+        
         
         let tip = billAmount * tipPercentage
         let total = (billAmount + tip) / splitValue
@@ -70,10 +95,9 @@ class ViewController: UIViewController {
         totalppLabel.text = String(format: "$%.2f", (totalNtip))
         tipppLabel.text = String(format: "$%.2f", (tip / splitValue))
         totaltipLabel.text = String(format: "$%.2f", (billAmount + tip))
-        
-        
-        
     }
+    
+    
     
     //the tip percentage reflect the new default value
     override func viewWillAppear(animated: Bool) {
