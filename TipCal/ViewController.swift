@@ -14,9 +14,6 @@ var tipSelection = Int(0)
 
 class ViewController: UIViewController {
 
-    
-   
-    @IBOutlet weak var newPercentLabel: UILabel!
     @IBOutlet weak var billamountField: UITextField!
     @IBOutlet weak var splitField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
@@ -26,10 +23,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipController: UISegmentedControl!
     
-
+    let defautls: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        billamountField.textAlignment = .Center
+        splitField.textAlignment = .Center
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        
         if (viewBillAmount != 0)
         {
             self.billamountField.text = String(format: "%.2f", viewBillAmount)
@@ -53,10 +59,8 @@ class ViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
-        
     }
 
-    
     @IBAction func onEditingChanged(sender: AnyObject) {
         
         let billAmount = NSString(string: billamountField.text!).doubleValue
@@ -84,24 +88,35 @@ class ViewController: UIViewController {
         let totalNtip = (billAmount / splitValue)
         let totalTip = (billAmount + tip)
         
-        tipLabel.text = "$\(tip)"
-        totalLabel.text = "$\(totalTip)"
-        totalppLabel.text = "$\(totalNtip)"
-        tipppLabel.text = "$\(tip / splitValue)"
-        totaltipLabel.text = "$\(billAmount + totalTip)"
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
-        totalppLabel.text = String(format: "$%.2f", (totalNtip))
-        tipppLabel.text = String(format: "$%.2f", (tip / splitValue))
-        totaltipLabel.text = String(format: "$%.2f", (billAmount + tip))
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale.currentLocale()
+        
+        
+        tipLabel.text = formatter.stringFromNumber(tip)
+        //tipLabel.text = "$\(tip)"
+        totalLabel.text = formatter.stringFromNumber(totalTip/splitValue)
+        //totalLabel.text = "$\(totalTip)"
+        totalppLabel.text = formatter.stringFromNumber(totalNtip)
+        // "$\(totalNtip)"
+        tipppLabel.text = formatter.stringFromNumber(tip / splitValue)
+        //"$\(tip / splitValue)"
+        totaltipLabel.text = formatter.stringFromNumber( totalTip)
+        //"$\(billAmount + totalTip)"
+        
     }
-    
-    
     
     //the tip percentage reflect the new default value
     override func viewWillAppear(animated: Bool) {
+        
+        //locale functionality
         super.viewWillAppear(animated)
+        if let symbol = NSLocale.currentLocale().objectForKey(NSLocaleCurrencySymbol)
+            
+        {
+            billamountField.attributedPlaceholder = NSAttributedString(string: "\(symbol)", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        }
         print("view will appear")
     }
     
@@ -128,7 +143,7 @@ class ViewController: UIViewController {
         _ = NSUserDefaults.standardUserDefaults()
         
     }
-    
+ 
    
 
     
