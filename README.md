@@ -29,6 +29,8 @@ The following **additional** features are implemented:
 - [x] List anything else that you can get done to improve the app functionality!
 The slider bar was implemented as the secondary screen instead of the segmented bar.
 
+- [x] Added Home Icon
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
