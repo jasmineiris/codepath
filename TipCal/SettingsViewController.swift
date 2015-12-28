@@ -51,25 +51,25 @@ class SettingsViewController: UIViewController {
         percentSlider.center.x = self.view.frame.width + 30
         customTipLabel.center.x = self.view.frame.width + 30
         
-        UIView.animateWithDuration(4.0, delay: 0.2, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+        UIView.animateWithDuration(8, delay: 0.3, usingSpringWithDamping: 40.0, initialSpringVelocity: 4.0, options: [], animations: ({
             
             self.currencyButton.center.x = self.view.frame.width / 2
             
         }), completion: nil)
         
-        UIView.animateWithDuration(4.0, delay: 0.1, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+        UIView.animateWithDuration(4.0, delay: 0.2, usingSpringWithDamping: 30.0, initialSpringVelocity: 3.0, options: [], animations: ({
             
             self.percentLabel.center.x = self.view.frame.width / 2
             
         }), completion: nil)
         
-        UIView.animateWithDuration(4.0, delay: 0.1, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+        UIView.animateWithDuration(4.0, delay: 0.2, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
             
             self.percentSlider.center.x = self.view.frame.width / 2
             
         }), completion: nil)
         
-        UIView.animateWithDuration(4.0, delay: 0, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+        UIView.animateWithDuration(4.0, delay: 0.3, usingSpringWithDamping: 40.0, initialSpringVelocity: 6.0, options: [], animations: ({
             
             self.customTipLabel.center.x = self.view.frame.width / 2
             
