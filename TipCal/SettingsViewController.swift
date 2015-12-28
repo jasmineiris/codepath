@@ -10,6 +10,10 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    // create instance of our custom transition manager
+
+    
+    @IBOutlet weak var customTipLabel: UILabel!
     @IBOutlet weak var percentSlider: UISlider!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var currencyButton: UIButton!
@@ -34,17 +38,49 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
-        
         // Do any additional setup after loading the view.
         let defaults = NSUserDefaults.standardUserDefaults()
         let defaultTip = Int(defaults.doubleForKey("tip percentage") * 100)
         self.percentLabel.text = String(format: "%d%%", defaultTip)
         self.percentSlider.value = Float(defaultTip)
-         self.view.backgroundColor = UIColor.blackColor()
-        //self.view.backgroundColor = (UIColor colorWithPatternImage:(UIImage imageNamed:"settingsbg"))
+        self.view.backgroundColor = UIColor.blackColor()
+        
+        
+        currencyButton.center.x = self.view.frame.width + 30
+        percentLabel.center.x = self.view.frame.width + 30
+        percentSlider.center.x = self.view.frame.width + 30
+        customTipLabel.center.x = self.view.frame.width + 30
+        
+        UIView.animateWithDuration(4.0, delay: 0.2, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+            
+            self.currencyButton.center.x = self.view.frame.width / 2
+            
+        }), completion: nil)
+        
+        UIView.animateWithDuration(4.0, delay: 0.1, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+            
+            self.percentLabel.center.x = self.view.frame.width / 2
+            
+        }), completion: nil)
+        
+        UIView.animateWithDuration(4.0, delay: 0.1, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+            
+            self.percentSlider.center.x = self.view.frame.width / 2
+            
+        }), completion: nil)
+        
+        UIView.animateWithDuration(4.0, delay: 0, usingSpringWithDamping: 10.0, initialSpringVelocity: 3.0, options: [], animations: ({
+            
+            self.customTipLabel.center.x = self.view.frame.width / 2
+            
+        }), completion: nil)
+        
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }    
     
    @IBAction func currencySettings(sender: AnyObject) {
        let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)!

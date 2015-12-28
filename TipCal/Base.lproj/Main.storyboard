@@ -38,7 +38,7 @@
                                     <fragment content="Total with Tip: ">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                            <font key="NSFont" size="19" name="HelveticaNeue-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -46,13 +46,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qu8-cY-CWN">
-                                <rect key="frame" x="29" y="399" width="159" height="21"/>
+                                <rect key="frame" x="29" y="399" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Per person without tip:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -60,13 +60,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J4s-ZJ-ZqD">
-                                <rect key="frame" x="29" y="439" width="73" height="20"/>
+                                <rect key="frame" x="29" y="439" width="73" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Total Tip: ">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -80,7 +80,7 @@
                                     <fragment content="Tip per person:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -128,35 +128,35 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qci-Vp-5i3">
                                 <rect key="frame" x="0.0" y="284.5" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.00013494981386937677" blue="0.44083412247474751" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vh7-gM-FJi">
                                 <rect key="frame" x="187" y="345.5" width="110" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aya-WW-lNd">
                                 <rect key="frame" x="175" y="459" width="122" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9bi-lZ-fJ2">
                                 <rect key="frame" x="157" y="429" width="140" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K5F-Cc-prB">
                                 <rect key="frame" x="183" y="392" width="112" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -269,7 +269,7 @@
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eVa-cJ-hNZ">
-                                <rect key="frame" x="51" y="86" width="209" height="23"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Custom Tip">
@@ -316,6 +316,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currencyButton" destination="uib-7A-xOf" id="xyJ-9u-F30"/>
+                        <outlet property="customTipLabel" destination="eVa-cJ-hNZ" id="8Ky-MC-28j"/>
                         <outlet property="percentLabel" destination="kYO-XE-5TI" id="kDg-5a-QJ4"/>
                         <outlet property="percentSlider" destination="UWs-4O-O8t" id="YwB-Lw-w31"/>
                     </connections>

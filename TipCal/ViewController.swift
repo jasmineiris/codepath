@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipController: UISegmentedControl!
     
     let defautls: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,6 +112,7 @@ class ViewController: UIViewController {
         
         //locale functionality
         super.viewWillAppear(animated)
+    
         if let symbol = NSLocale.currentLocale().objectForKey(NSLocaleCurrencySymbol)
             
         {
@@ -122,12 +123,12 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear")
+
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        print("view will disappear")
+       
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -138,14 +139,6 @@ class ViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
-    @IBAction func newPercent(sender: AnyObject) {
-        //To load a key from NSUserDefaults, do something like this:
-        _ = NSUserDefaults.standardUserDefaults()
-        
-    }
- 
-   
-
     
     // Optionally initialize the property to a desired starting value
 //    self.firstView.alpha = 0
