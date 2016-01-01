@@ -29,7 +29,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
+=======
+        var swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
+>>>>>>> 04283949d00eea60e0019f1a957b2d27f4cfde00
         swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Up
         self.view.addGestureRecognizer(swipeGestureRecognizer)
         
@@ -186,6 +190,7 @@ class ViewController: UIViewController {
         
     }
     
+<<<<<<< HEAD
 
     @IBAction func enlargen2(sender: AnyObject) {
         self.popTotalLabel()
@@ -210,6 +215,8 @@ class ViewController: UIViewController {
         })
     }
     
+=======
+>>>>>>> 04283949d00eea60e0019f1a957b2d27f4cfde00
     override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
         if let id = identifier{
             if id == "firstIdUnwind" {
