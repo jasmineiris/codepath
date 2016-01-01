@@ -18,6 +18,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var currencyButton: UIButton!
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
     @IBAction func percentAction(sender: AnyObject) {
         let currentValue = Int(percentSlider.value)
         let normPerc = Double(currentValue) / 100
@@ -37,6 +39,10 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showFirstViewController")
+        swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeGestureRecognizer)
         
         // Do any additional setup after loading the view.
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -85,8 +91,15 @@ class SettingsViewController: UIViewController {
    @IBAction func currencySettings(sender: AnyObject) {
        let settingsURL = NSURL(string: UIApplicationOpenSettingsURLString)!
        UIApplication.sharedApplication().openURL(settingsURL)
-}
-
+    }
+    
+    func showFirstViewController() {
+        self.performSegueWithIdentifier("firstIdUnwind", sender: self)
+    }
+    
+    @IBAction func returnMain(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("firstIdUnwind", sender: self)
+    }
 }
 
     /*
