@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="SXj-OT-Jdp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="SXj-OT-Jdp">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--GRATIS-->
@@ -223,7 +223,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
-                                    <segue destination="Ola-oN-F8I" kind="push" id="wtc-yF-8xn"/>
+                                    <segue destination="Ola-oN-F8I" kind="custom" identifier="firstId" customClass="customSegues" customModule="TipCal" customModuleProvider="target" id="wtc-yF-8xn"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -249,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="769" y="408"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Title-->
         <scene sceneID="FJe-KL-sSy">
             <objects>
                 <viewController id="Ola-oN-F8I" customClass="SettingsViewController" customModule="TipCal" customModuleProvider="target" sceneMemberID="viewController">
@@ -307,21 +307,37 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" id="Bie-ST-cCU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Settings" id="tFp-yD-JrM">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ewh-pi-kBz">
+                                            <connections>
+                                                <action selector="returnMain:" destination="Ola-oN-F8I" id="wgZ-a9-Sk6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="x81-6m-pMQ"/>
+                    <navigationItem key="navigationItem" title="Title" id="oDl-kx-6oL"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="Ewh-pi-kBz" id="uF6-0S-7ZQ"/>
                         <outlet property="currencyButton" destination="uib-7A-xOf" id="xyJ-9u-F30"/>
                         <outlet property="customTipLabel" destination="eVa-cJ-hNZ" id="8Ky-MC-28j"/>
                         <outlet property="percentLabel" destination="kYO-XE-5TI" id="kDg-5a-QJ4"/>
                         <outlet property="percentSlider" destination="UWs-4O-O8t" id="YwB-Lw-w31"/>
+                        <segue destination="TIv-v0-dOv" kind="unwind" identifier="firstIdUnwind" customClass="customSeguesUnwind" customModule="TipCal" customModuleProvider="target" unwindAction="returnFromSegueActions:" id="GGY-ns-BdX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3N8-mU-BU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TIv-v0-dOv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1161" y="408"/>
         </scene>

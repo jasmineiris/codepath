@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
+        swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipeGestureRecognizer)
+        
         billamountField.textAlignment = .Center
         splitField.textAlignment = .Center
         
@@ -61,6 +65,7 @@ class ViewController: UIViewController {
         
     }
 
+    
     @IBAction func onEditingChanged(sender: AnyObject) {
         
         let billAmount = NSString(string: billamountField.text!).doubleValue
@@ -140,6 +145,26 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func showSecondViewController() {
+        self.performSegueWithIdentifier("firstId", sender: self)
+    }
+    
+    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+        
+    }
+    
+    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        if let id = identifier{
+            if id == "firstIdUnwind" {
+                let unwindSegue = customSeguesUnwind(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+                    
+                })
+                return unwindSegue
+            }
+        }
+        
+        return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)!
+    }
     // Optionally initialize the property to a desired starting value
 //    self.firstView.alpha = 0
 //    self.secondView.alpha = 1
@@ -149,5 +174,6 @@ class ViewController: UIViewController {
 //    self.firstView.alpha = 1
 //    self.secondView.alpha = 0
 //    })
+    
 }
 
