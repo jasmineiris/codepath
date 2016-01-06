@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
+        swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipeGestureRecognizer)
+        
         billamountField.textAlignment = .Center
         splitField.textAlignment = .Center
         
@@ -49,6 +53,8 @@ class ViewController: UIViewController {
             self.splitField.text = String(format: "%d", viewSplitNum)
         }
         self.tipController.selectedSegmentIndex = tipSelection
+        
+        
         onEditingChanged(self)
     }
 
@@ -61,6 +67,7 @@ class ViewController: UIViewController {
         
     }
 
+    
     @IBAction func onEditingChanged(sender: AnyObject) {
         
         let billAmount = NSString(string: billamountField.text!).doubleValue
@@ -123,11 +130,42 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
+        
+        splitField.center.x =  -30
+        //@IBOutlet weak var tipLabel: UILabel!
+        //@IBOutlet weak var tipppLabel: UILabel!
+        //@IBOutlet weak var totalppLabel: UILabel!
+        //@IBOutlet weak var totaltipLabel: UILabel!
+        //@IBOutlet weak var totalLabel: UILabel!
+        
+        billamountField.center.x = self.view.frame.width + 30
+        
+        
+        UIView.animateWithDuration(1.5, delay: 0.3, usingSpringWithDamping: 40.0, initialSpringVelocity: 4.0, options: [], animations: ({
+            
+            self.billamountField.center.x = self.view.frame.width / 2
+            
+        }), completion: nil)
+        
+        UIView.animateWithDuration(1.5, delay: 0.3, usingSpringWithDamping: 40.0, initialSpringVelocity: 4.0, options: [], animations: ({
+            
+            self.splitField.center.x = self.view.frame.width / 2
+            
+        }), completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.tipController.alpha = 1.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.totalLabel.alpha = 1.0
+            }, completion: nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        self.tipController.alpha = 0.0
+        self.totalLabel.alpha = 0.0
        
     }
     
@@ -140,6 +178,52 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func showSecondViewController() {
+        self.performSegueWithIdentifier("firstId", sender: self)
+    }
+    
+    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+        
+    }
+    
+
+    @IBAction func enlargen2(sender: AnyObject) {
+        self.popTotalLabel()
+    }
+    
+    @IBAction func enlargen(sender: AnyObject) {
+        self.popTotalLabel()
+    }
+    
+    @IBAction func enlargen3(sender: AnyObject) {
+        self.popTotalLabel()
+    }
+    func popTotalLabel()
+    {
+        let default_transform = self.totalLabel.transform
+        
+        self.totalLabel.transform = CGAffineTransformScale(default_transform, 0.35, 0.35)
+        
+        UIView.animateWithDuration(0.25, animations: {
+            self.totalLabel.transform = CGAffineTransformScale(default_transform, 2, 2);
+            }, completion: { finished in
+                UIView.animateWithDuration(0.25, animations: {
+                    self.totalLabel.transform = CGAffineTransformScale(default_transform, 1, 1) } )
+        })
+    }
+    
+    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        if let id = identifier{
+            if id == "firstIdUnwind" {
+                let unwindSegue = customSeguesUnwind(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+                    
+                })
+                return unwindSegue
+            }
+        }
+        
+        return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)!
+    }
     // Optionally initialize the property to a desired starting value
 //    self.firstView.alpha = 0
 //    self.secondView.alpha = 1
@@ -149,5 +233,6 @@ class ViewController: UIViewController {
 //    self.firstView.alpha = 1
 //    self.secondView.alpha = 0
 //    })
+    
 }
 

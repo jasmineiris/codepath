@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>05E5C9F3-EE8C-4EC3-AF7D-DD2334AFCB38</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TipCal</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF3889403A98AAD50C2483FB848BD8CD29F71C2B</key>
+		<string>https://github.com/jasmineiris/codepath.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TipCal.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF3889403A98AAD50C2483FB848BD8CD29F71C2B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jasmineiris/codepath.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF3889403A98AAD50C2483FB848BD8CD29F71C2B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF3889403A98AAD50C2483FB848BD8CD29F71C2B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tipcal</string>
+		</dict>
+	</array>
+</dict>
+</plist>
