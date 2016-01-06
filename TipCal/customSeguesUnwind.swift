@@ -11,8 +11,18 @@ import UIKit
 class customSeguesUnwind: UIStoryboardSegue {
     override func perform() {
         // Assign the source and destination views to local variables.
+<<<<<<< HEAD
         let secondVCView = self.sourceViewController.view as UIView!
         let firstVCView = self.destinationViewController.view as UIView!
+=======
+<<<<<<< HEAD
+        let secondVCView = self.sourceViewController.view as UIView!
+        let firstVCView = self.destinationViewController.view as UIView!
+=======
+        var secondVCView = self.sourceViewController.view as UIView!
+        var firstVCView = self.destinationViewController.view as UIView!
+>>>>>>> 04283949d00eea60e0019f1a957b2d27f4cfde00
+>>>>>>> 3d4b494830a2592e45cd99c1ae953acda8d18afd
         
         let screenHeight = UIScreen.mainScreen().bounds.size.height
         

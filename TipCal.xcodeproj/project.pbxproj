@@ -16,6 +16,7 @@
 		36345F4A1C1005310029DDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36345F481C1005310029DDAF /* LaunchScreen.storyboard */; };
 		3652562C1C3267BE00901B24 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3652562A1C3267BE00901B24 /* Model.xcdatamodeld */; };
 		3689630A1C18EDA70028B55B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368963091C18EDA70028B55B /* SettingsViewController.swift */; };
+		3693C1E91C360F1A002EC424 /* CountryPicker-master in Resources */ = {isa = PBXBuildFile; fileRef = 3693C1E81C360F1A002EC424 /* CountryPicker-master */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		36345F4B1C1005310029DDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3652562B1C3267BE00901B24 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		368963091C18EDA70028B55B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3693C1E81C360F1A002EC424 /* CountryPicker-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "CountryPicker-master"; path = "TipCal/CountryPicker-master"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				36345F3E1C1005310029DDAF /* TipCal */,
 				36345F3D1C1005310029DDAF /* Products */,
+				3693C1E81C360F1A002EC424 /* CountryPicker-master */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +141,7 @@
 				36345F4A1C1005310029DDAF /* LaunchScreen.storyboard in Resources */,
 				36345F471C1005310029DDAF /* Assets.xcassets in Resources */,
 				36345F451C1005310029DDAF /* Main.storyboard in Resources */,
+				3693C1E91C360F1A002EC424 /* CountryPicker-master in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
