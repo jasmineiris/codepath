@@ -29,15 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-<<<<<<< HEAD
         let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
-=======
-<<<<<<< HEAD
-        let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
-=======
-        var swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "showSecondViewController")
->>>>>>> 04283949d00eea60e0019f1a957b2d27f4cfde00
->>>>>>> 3d4b494830a2592e45cd99c1ae953acda8d18afd
         swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Up
         self.view.addGestureRecognizer(swipeGestureRecognizer)
         
@@ -194,10 +186,6 @@ class ViewController: UIViewController {
         
     }
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 3d4b494830a2592e45cd99c1ae953acda8d18afd
 
     @IBAction func enlargen2(sender: AnyObject) {
         self.popTotalLabel()
@@ -212,20 +200,6 @@ class ViewController: UIViewController {
     }
     func popTotalLabel()
     {
-<<<<<<< HEAD
-        let default_transform = self.totalLabel.transform
-        
-        self.totalLabel.transform = CGAffineTransformScale(default_transform, 0.35, 0.35)
-        
-        UIView.animateWithDuration(0.25, animations: {
-            self.totalLabel.transform = CGAffineTransformScale(default_transform, 2, 2);
-            }, completion: { finished in
-                UIView.animateWithDuration(0.25, animations: {
-                    self.totalLabel.transform = CGAffineTransformScale(default_transform, 1, 1) } )
-        })
-    }
-    
-=======
         self.totalLabel.transform = CGAffineTransformScale(self.tipLabel.transform, 0.35, 0.35)
         
         UIView.animateWithDuration(0.25, animations: {
@@ -236,9 +210,6 @@ class ViewController: UIViewController {
         })
     }
     
-=======
->>>>>>> 04283949d00eea60e0019f1a957b2d27f4cfde00
->>>>>>> 3d4b494830a2592e45cd99c1ae953acda8d18afd
     override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
         if let id = identifier{
             if id == "firstIdUnwind" {

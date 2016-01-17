@@ -2,7 +2,7 @@
 //  customSegues.swift
 //  TipCal
 //
-//  Created by Farrell, Ryan on 12/31/15.
+//  Created by Jasmine Farrell on 12/31/15.
 //  Copyright © 2015 codepath. All rights reserved.
 //
 
